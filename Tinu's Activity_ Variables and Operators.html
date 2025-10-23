@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/HTML/f.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinu's Activity: Variables and Operators</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #d64949; }
+        .result-box { margin-top: 10px; border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; }
+        strong { color: #0066cc; }
+    </style>
+</head>
+<body>
+
+    <h1>Basic Mathematical Operations for Tinu</h1>
+
+    <div class="result-box">
+        <p>We are using two variables:</p>
+        <p id="variables">Variable 1 (<code>num1</code>): <strong>20</strong> <br> 
+             Variable 2 (<code>num2</code>): <strong>5</strong></p>
+    </div>
+
+    <h2>Results:</h2>
+
+    <div class="result-box">
+        <p><strong>Addition (+)</strong></p>
+        <div id="resultAddition">20 + 5 = <strong>25</strong></div>
+    </div>
+    
+    <div class="result-box">
+        <p><strong>Subtraction (-)</strong></p>
+        <div id="resultSubtraction">20 - 5 = <strong>15</strong></div>
+    </div>
+    
+    <div class="result-box">
+        <p><strong>Multiplication (*)</strong></p>
+        <div id="resultMultiplication">20 * 5 = <strong>100</strong></div>
+    </div>
+    
+    <div class="result-box">
+        <p><strong>Division (/)</strong></p>
+        <div id="resultDivision">20 / 5 = <strong>4</strong></div>
+    </div>
+    
+    <div class="result-box">
+        <p><strong>Modulus (%) - Remainder</strong></p>
+        <div id="resultModulus">Remainder of 20 divided by 5 (<code>20 % 5</code>) = <strong>0</strong></div>
+    </div>
+
+    <script>
+        // === 1. Define Variables ===
+        const num1 = 20;
+        const num2 = 5;
+
+        // Display the defined variables
+        document.getElementById("variables").innerHTML = 
+            `Variable 1 (<code>num1</code>): <strong>${num1}</strong> <br> 
+             Variable 2 (<code>num2</code>): <strong>${num2}</strong>`;
+
+
+        // === 2. Perform Calculations using Operators and Variables ===
+
+        // Addition (+)
+        const sum = num1 + num2;
+        document.getElementById("resultAddition").innerHTML = 
+            `${num1} + ${num2} = <strong>${sum}</strong>`;
+
+        // Subtraction (-)
+        const difference = num1 - num2;
+        document.getElementById("resultSubtraction").innerHTML = 
+            `${num1} - ${num2} = <strong>${difference}</strong>`;
+
+        // Multiplication (*)
+        const product = num1 * num2;
+        document.getElementById("resultMultiplication").innerHTML = 
+            `${num1} * ${num2} = <strong>${product}</strong>`;
+
+        // Division (/)
+        const quotient = num1 / num2;
+        document.getElementById("resultDivision").innerHTML = 
+            `${num1} / ${num2} = <strong>${quotient}</strong>`;
+
+        // Modulus (%) - gives the remainder of the division
+        const remainder = num1 % num2;
+        document.getElementById("resultModulus").innerHTML = 
+            `Remainder of ${num1} divided by ${num2} (<code>${num1} % ${num2}</code>) = <strong>${remainder}</strong>`;
+
+    </script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div></div></body></html>
